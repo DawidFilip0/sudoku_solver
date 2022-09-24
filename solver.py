@@ -7,8 +7,10 @@ def solve(board=None):
     if not board:
         board=[[[-1,False] for j in range(9)] for i in range(9)]
 
+    print("initinal board: ")
     for i in board:
         print(i)
+    print("----------------------")
 
     global found
     found=False
@@ -18,6 +20,7 @@ def solve(board=None):
 
     def backtrack(col,row):
         global found
+
         if row == 9 or found==True :
             solution = copy.deepcopy(board)
             solutions.append(solution)
@@ -46,6 +49,10 @@ def solve(board=None):
                     continue
              
                 board[row][col][0] = i
+
+            if row == 8:
+                if col==7:
+                    print("working")
 
             if col<8:
                 backtrack(col+1,row)
