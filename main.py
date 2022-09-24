@@ -1,14 +1,19 @@
 import solver
+import numpy
 
-board=[ [[8, True], [-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [9, True]],
-        [[-1, False], [4, True], [-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [2, True], [-1, False]],
-        [[-1, False], [5, True], [-1, False], [9, True], [1, True], [-1, False], [-1, False], [-1, False], [-1, False]],
-        [[-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [7, True], [-1, False], [-1, False], [-1, False]],
-        [[7, True], [-1, False], [3, True], [8, True], [-1, False], [-1, False], [-1, False], [-1, False], [-1, False]],
-        [[-1, False], [-1, False], [2, True], [-1, False], [-1, False], [3, True], [-1, False], [-1, False], [4, True]],
-        [[-1, False], [-1, False], [-1, False], [-1, False], [6, True], [-1, False], [8, True], [-1, False], [-1, False]],
-        [[-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [-1, False], [3, True], [7, True], [2, True]],
-        [[-1, False], [-1, False], [-1, False], [-1, False], [8, True], [5, True], [4, True], [-1, False], [-1, False]]]
+
+
+board=numpy.array([ [-1,6,9,7,-1,8,3,2,1],
+                    [1,4,7,3,-1,5,9,8,-1,],
+                    [2,-1,-1,1,-1,6,-1,-1,-1],
+                    [-1,9,5,8,-1,-1,-1,-1,-1,],
+                    [-1,-1,-1,-1,1,-1,-1,5,-1],
+                    [8,-1,4,-1,-1,-1,2,-1,9],
+                    [-1,-1,-1,2,7,-1,6,9,-1,],
+                    [4,-1,-1,9,-1,-1,-1,-1,-1,],
+                    [-1,7,-1,-1,8,-1,1,-1,5]],dtype='int8')
+
+
 
 
 
