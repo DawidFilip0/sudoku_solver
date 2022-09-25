@@ -1,33 +1,19 @@
 import copy
-from tkinter.tix import Tree
 import numpy
 
 
 copy.copy
 
-
 def solve(board):
 
-    # if  board != []:
-    #     board = [[-1 for j in range(9)] for i in range(9)]
-
-    # print("initinal board: ")
-    # for i in board:
-    #     print(i)
-    # print("----------------------")
-
     print(board)
-
-
-    
+   
     found = False
 
     solutions = []
-
     
     def backtrack(col, row,found):
        
-
         
         if row == 9 or found == True:
             solution = copy.deepcopy(board)
@@ -59,15 +45,10 @@ def solve(board):
 
                 if col < 8:
                     found= backtrack(col+1, row,found)
-                    if found==True:
-                        return True 
 
                 if col == 8:
                     found= backtrack(0, row+1,found)
-                    if found==True:
-                        return True
-
-                
+               
                 board[row,col] = -1
 
         else:
@@ -85,6 +66,4 @@ def solve(board):
 
     backtrack(0, 0,found)
 
-    # for i in solutions[0]:
-    #     print(i)
     print(solutions[0])
